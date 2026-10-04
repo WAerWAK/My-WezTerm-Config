@@ -59,15 +59,14 @@
 
 提示符分两行，第一行是状态信息，第二行是输入行：
 
-```
- ◥ D:\Study\Code\Demo ▶  java 24.0.1 ▶▶▶▶  RAM 68% ▶        ◥ 0ms ▶◥  main ✎ ?1 ~2  ▶  tgx59 ▶  ⊞ ▶
- ❯
-```
+![效果预览](D:\Projects\WezTermConfig\docs\效果预览.png)
 
 > `▶` 表示各级颜色的过渡三角。没有内容的段（比如当前目录不是 Node 项目时的 `node` 段）
 > 只会留下一个颜色过渡，不会断开整条颜色链。
 
-两套配色的色卡与对比度对照见 [`docs/theme-palettes.png`](docs/theme-palettes.png)：
+两套配色的色卡与对比度如下：
+
+![配色对比图](D:\Projects\WezTermConfig\docs\配色对比图.png)
 
 | 主题 | 色系 | 左链末端 | 最低对比度 |
 |---|---|---|---|
