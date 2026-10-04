@@ -1,0 +1,19 @@
+# ---- install.ps1 生成的备份 ----
+*.bak
+*.bak-*
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- Lua 工具链缓存（上游 wezterm 配置约定）----
+/luarocks.bat
+/lua.bat
+/lua_modules
+/.luarocks
+
+# ---- Windows ----
+Thumbs.db
+desktop.ini

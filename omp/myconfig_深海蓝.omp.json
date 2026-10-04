@@ -1,0 +1,147 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "console_title_template": "{{if .Root}} \u26a1 {{end}}\ud83d\udcc1{{.Folder}}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#061728",
+          "leading_diamond": "\ue0be",
+          "template": "{{ if .Root }} \uf0e7 {{ else }}\u2800{{ end }}"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "foreground": "#ffffff",
+          "background": "#09223B",
+          "template": " {{ .Path }} ",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "folder_separator_icon": "\\",
+            "style": "full",
+            "mapped_locations_enabled": false
+          }
+        },
+        {
+          "type": "java",
+          "style": "accordion",
+          "foreground": "#ffffff",
+          "background": "#0C2F4C",
+          "template": " \ue738 {{ .Full }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "node",
+          "style": "accordion",
+          "foreground": "#ffffff",
+          "background": "#0F3B5E",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "python",
+          "style": "accordion",
+          "foreground": "#ffffff",
+          "background": "#13486F",
+          "template": " \ue73c {{ .Full }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "rust",
+          "style": "accordion",
+          "foreground": "#ffffff",
+          "background": "#185680",
+          "template": " \ue7a8 {{ .Full }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "kotlin",
+          "style": "accordion",
+          "foreground": "#ffffff",
+          "background": "#1C6491",
+          "template": " \ue634 {{ .Full }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "sysinfo",
+          "style": "powerline",
+          "foreground": "#ffffff",
+          "background": "#2172A1",
+          "template": " \uf538 {{ round .PhysicalPercentUsed 0 }}% ",
+          "powerline_symbol": "\ue0b0"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#222D35",
+          "leading_diamond": "\ue0be",
+          "trailing_diamond": "\ue0b0",
+          "template": " \uf252 {{ .FormattedMs }} ",
+          "options": {
+            "always_enabled": true,
+            "threshold": 0
+          },
+          "min_width": 100
+        },
+        {
+          "type": "git",
+          "style": "accordion",
+          "foreground": "#ffffff",
+          "background": "#293F4E",
+          "template": " {{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "session",
+          "style": "powerline",
+          "foreground": "#ffffff",
+          "background": "#2D546A",
+          "template": " \uf007 {{ .UserName }} ",
+          "powerline_symbol": "\ue0b0",
+          "min_width": 140
+        },
+        {
+          "type": "os",
+          "style": "powerline",
+          "foreground": "#ffffff",
+          "background": "#2E6B8A",
+          "template": " {{ .Icon }} ",
+          "powerline_symbol": "\ue0b0",
+          "min_width": 130
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ],
+          "template": "\u276f ",
+          "options": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ]
+}
