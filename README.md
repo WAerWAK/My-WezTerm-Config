@@ -9,6 +9,13 @@
 [![Prompt](https://img.shields.io/badge/prompt-Oh%20My%20Posh-3B82F6)](#)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
+<p align="center">
+  本仓库配置由 <a url="https://github.com/QianSong1/wezterm-config">QianSong1/wezterm-config</a> 使用 DeepSeek V4.1 Flash 修改而来
+</p>
+<p align="center">
+	可能存在未知问题，介意勿用
+</p>
+
 ---
 
 ## 目录
